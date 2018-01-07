@@ -1,0 +1,15 @@
+
+打开module.sublime-build
+	"cmd":["D:/module/run/debug/win32/module.exe","D:/module"],
+	"working_dir" : "D:/module/base/src",
+	请将以上 D:/module/client 修改未你的工程目录 
+
+module.sublime-build module可以自己重命名
+
+将新的module.sublime-build放入 打开sublimeText >>选择preferences >>浏览程序包 在打开的文档下面 User\下
+
+打开 sublimeText 工具 》》编译系统 》》 选择你所命名的 例如 将新的module
+
+				文件 》》打开文件夹 （选择你的工程目录）
+
+				工具 》》 立即编译 即会调用win32版本的exe 调用的lua 为 base/src下的lua

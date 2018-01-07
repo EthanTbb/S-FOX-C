@@ -1,0 +1,8 @@
+{
+	"cmd":["D:/module/run/debug/win32/module.exe","D:/module/client"],
+	"working_dir" : "D:/module/client/base/src",
+  	"file_regex": "^(...*?):([0-9]*):?([0-9]*)",  
+    "shell": true,
+    "encoding":"utf-8",
+    "selector":"source.lua"
+}

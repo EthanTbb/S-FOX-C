@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "d05bad8a-7ad8-0c4c-b4c9-f9345007590e++2388",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "d05bad8a-7ad8-0c4c-b4c9-f9345007590e++2388" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "d05bad8a-7ad8-0c4c-b4c9-f9345007590e++2388" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "13E93075-84B0-44FA-9150-EACF67A23A4A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "d05bad8a-7ad8-0c4c-b4c9-f9345007590e++2388" : "Mobile\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GloryProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "frameworks\/runtime-src\/proj.ios_mac\/GloryProject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/s102.webfox.com:2046\/svn\/WH6603",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "d05bad8a-7ad8-0c4c-b4c9-f9345007590e++2388"
+    }
+  ]
+}

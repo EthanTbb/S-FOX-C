@@ -1,0 +1,146 @@
+///////////////////////////////////////////////////////////////////////////
+//2016-9-23 by zhongtao
+	1、frameworks\cocos2d-x\cocos\ui\UIWebViewImpl-ios.mm
+	line:132左右 
+	//添加 webview ios默认底为透明
+	- (void)setupWebView {
+	    if (!self.uiWebView) {
+	        self.uiWebView = [[[UIWebView alloc] init] autorelease];
+	        self.uiWebView.delegate = self;
+	        self.uiWebView.opaque = NO;
+	        self.uiWebView.backgroundColor = [UIColor clearColor];
+	    }
+	    if (!self.uiWebView.superview) {
+	        auto view = cocos2d::Director::getInstance()->getOpenGLView();
+	        auto eaglview = (CCEAGLView *) view->getEAGLView();
+	        [eaglview addSubview:self.uiWebView];
+	    }
+	}
+
+	2、frameworks\cocos2d-x\cocos\platform\android\java\src\org\cocos2dx\lib\Cocos2dxWebView.java
+	line:58
+	//添加webview android默认底为透明
+	this.setFocusableInTouchMode(true);
+
+    this.getSettings().setSupportZoom(false);
+
+    this.getSettings().setJavaScriptEnabled(true);
+
+    //设置背景颜色
+    this.setBackgroundColor(0);
+
+
+    3、
+    //监听默认弹窗点击事件
+    frameworks\cocos2d-x\cocos\platform\CCCommon.h
+
+    frameworks\cocos2d-x\cocos\platform\android\CCCommon-android.cpp
+    //监听安卓默认弹窗按钮点击事件
+
+    frameworks\cocos2d-x\cocos\platform\ios\CCCommon-ios.mm
+    //监听ios默认弹窗按钮点击事件
+
+    frameworks\cocos2d-x\cocos\platform\win32\CCCommon-win32.cpp
+    //监听win32默认弹窗按钮点击事件
+
+
+//2016-8-2 by zhongtao
+	frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\lua_cocos2dx_experimental_webview_manual.cpp
+	line:165 左右
+	//添加 webview lua的 setOnJSCallback函数注册
+
+	static int lua_cocos2dx_experimental_WebView_setOnJSCallback(lua_State* L)
+	{
+	    if (nullptr == L)
+	    {
+	        return 0;
+	    }
+
+	    int argc = 0;
+	    cocos2d::experimental::ui::WebView* self = nullptr;
+	    
+	#if COCOS2D_DEBUG >= 1
+	    tolua_Error tolua_err;
+	    if (!tolua_isusertype(L,1,"ccexp.WebView",0,&tolua_err)) goto tolua_lerror;
+	#endif
+	    
+	    self = static_cast<cocos2d::experimental::ui::WebView*>(tolua_tousertype(L,1,0));
+	    
+	#if COCOS2D_DEBUG >= 1
+	    if (nullptr == self) {
+	        tolua_error(L,"invalid 'self' in function 'lua_cocos2dx_experimental_WebView_setOnJSCallback'\n", nullptr);
+	        return 0;
+	    }
+	#endif
+	    
+	    argc = lua_gettop(L) - 1;
+	    
+	    if (argc == 1)
+	    {
+	#if COCOS2D_DEBUG >= 1
+	        if (!toluafix_isfunction(L,2,"LUA_FUNCTION",0,&tolua_err))
+	        {
+	            goto tolua_lerror;
+	        }
+	#endif
+	        
+	        LUA_FUNCTION handler = (  toluafix_ref_function(L,2,0) );
+	        std::function<void(experimental::ui::WebView *sender, const std::string &url)> callback = [L,handler](experimental::ui::WebView *sender, const std::string &url){
+	            toluafix_pushusertype_ccobject(L, sender->_ID, &(sender->_luaID), (void*)sender,"ccexp.WebView");
+	            tolua_pushcppstring(L, url);
+	            LuaEngine::getInstance()->getLuaStack()->executeFunctionByHandler(handler, 2);
+	        };
+	        
+	        ScriptHandlerMgr::getInstance()->addCustomHandler((void*)self, handler);
+	        self->setOnJSCallback(callback);
+	        return 0;
+	    }
+	    luaL_error(L, "%s has wrong number of arguments: %d, was expecting %d\n ", "ccexp.WebView:setOnJSCallback",argc, 1);
+	    return 0;
+	#if COCOS2D_DEBUG >= 1
+	tolua_lerror:
+	    tolua_error(L, "#ferror in function 'lua_cocos2dx_experimental_WebView_setOnJSCallback'.", &tolua_err);
+	#endif
+	    return 0;
+	}
+
+	extendWebView(lua_State* L)
+	{
+		...
+		//添加
+		tolua_function(L, "setOnJSCallback", lua_cocos2dx_experimental_WebView_setOnJSCallback);
+	}
+
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+//2016-7-26 by zhongtao
+	frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\CCLuaEngine.cpp
+	line:394
+	switch(action)
+    {
+    	//原代码: case EventKeyboard::KeyCode::KEY_BACKSPACE:
+        case EventKeyboard::KeyCode::KEY_BACK:
+			_stack->pushString("backClicked");
+			break;
+		case EventKeyboard::KeyCode::KEY_MENU:
+            _stack->pushString("menuClicked");
+			break;
+		default:
+			break;
+    }
+
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+//2016-05-04 by wangxiaoyu
+	frameworks\cocos2d-x\cocos\platform\apple\CCFileUtils-apple.mm
+
+	std::string FileUtilsApple::getWritablePath() const
+	{
+		...
+		//原代码  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+		//                                NUserDomainMask, YES);
+		NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+	}
+///////////////////////////////////////////////////////////////////////////

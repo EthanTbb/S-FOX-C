@@ -1,0 +1,1 @@
+start %cd%\frameworks\runtime-src\proj.win32\Release\GloryProject.exe -workdir %cd%\client\

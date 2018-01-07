@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="foxuc.qp.Glory.jlzl"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="19" 
+        android:targetSdkVersion="19"/>
+
+    <uses-feature android:glEsVersion="0x00020000" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+
+        <!-- Tell Cocos2dxActivity the name of our .so -->
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="qpry_lua" />
+
+        <activity
+            android:name="org.cocos2dx.lua.AppActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- SINA 辅助完成SSO、Oauth  -->
+	    <activity
+	        android:name="com.egame.webfee.ui.EgameSdkWebFeeActivity"
+	        android:configChanges="orientation|keyboardHidden"
+	        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+	    </activity>
+	    
+	    <!--微信支付-->
+	    <activity
+	        android:name=".wxapi.WXPayEntryActivity"
+	        android:exported="true"
+	        android:launchMode="singleTop">
+	    </activity>
+	    
+	    <!-- 微信回调 -->
+	    <activity
+	        android:name=".wxapi.WXEntryActivity"
+    		android:configChanges="keyboardHidden|orientation|screenSize"
+    		android:exported="true"
+    		android:screenOrientation="landscape"
+    		android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+	        >	        
+	    </activity>
+	    
+	    <!-- ******************************* 友盟集成分享 ******************************* -->
+	    <!-- ###################注册SDK使用的Activity###################### -->
+	    <!-- 分享编辑页 -->
+	    <activity
+	        android:name="com.umeng.socialize.view.ShareActivity"
+	        android:configChanges="orientation|keyboard"
+	        android:launchMode="singleTask"
+	        android:noHistory="true"
+	        android:theme="@style/Theme.UMDialog"
+	        android:windowSoftInputMode="stateVisible|adjustResize" >
+	    </activity>
+	    <!-- ###################添加UmengAppkey###################### -->
+	    <meta-data
+	        android:name="UMENG_APPKEY"
+	        android:value="56e2236a67e58e45210022c3" >
+	    </meta-data>
+	    
+	    <!-- 支付宝支付 -->
+	    <activity
+	        android:name="com.alipay.sdk.app.H5PayActivity"
+	        android:configChanges="orientation|keyboardHidden|navigation"
+	        android:exported="false"
+	        android:screenOrientation="behind"
+	        android:windowSoftInputMode="adjustResize|stateHidden" >
+	    </activity>
+	    
+	    <!-- 竣付通 -->
+	    <activity
+            android:name="sdk.pay.PayWebViewActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.heepay.plugin.activity.WeChatNotityActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+	    </activity>
+	    
+        <!-- 高德 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="534bc0e2935e705e679505c387d1c9fa" />
+        <service 
+            android:name="com.amap.api.location.APSService" >
+        </service>
+    </application>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.webkit.permission.PLUGIN" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+</manifest>
