@@ -1,0 +1,119 @@
+<Solution>
+  <PropertyGroup Name="studio" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="fonts">
+          <TTF Name="round_body.ttf" />
+        </Folder>
+        <Folder Name="game">
+          <Image Name="389_sp_setLayer_bg.png" />
+          <Image Name="background_sparrowHz.png" />
+          <Image Name="background_talk.png" />
+          <Image Name="background_userInfo.png" />
+          <Image Name="card_0.png" />
+          <Project Name="GameScene.csd" Type="Scene" />
+          <Image Name="num_clock.png" />
+          <Image Name="num_score.png" />
+          <Project Name="Player.csd" Type="Layer" />
+          <Project Name="SetLayer.csd" Type="Scene" />
+          <Image Name="sp_trusteeCover.png" />
+          <Image Name="sp_trusteeMan.png" />
+        </Folder>
+        <Folder Name="gameResult">
+          <Project Name="GameResultLayer.csd" Type="Scene" />
+          <Project Name="nodeUser.csd" Type="Node" />
+          <Image Name="num_lose.png" />
+          <Image Name="num_win.png" />
+          <Image Name="result_background.png" />
+          <Image Name="result_background_1.png" />
+          <Image Name="win_background.png" />
+        </Folder>
+        <PlistImageFolder Image="gameScene.png" PListFile="gameScene.plist" Name=".gameScene_PList.Dir">
+          <PlistImageFile Name="389_bt_set_1.png" Key="389_bt_set_1.png" />
+          <PlistImageFile Name="389_bt_set_2.png" Key="389_bt_set_2.png" />
+          <PlistImageFile Name="389_bt_switch_1.png" Key="389_bt_switch_1.png" />
+          <PlistImageFile Name="389_bt_switch_2.png" Key="389_bt_switch_2.png" />
+          <PlistImageFile Name="389_cbx_switch_1.png" Key="389_cbx_switch_1.png" />
+          <PlistImageFile Name="389_cbx_switch_2.png" Key="389_cbx_switch_2.png" />
+          <PlistImageFile Name="389_sp_listen_anyCard.png" Key="389_sp_listen_anyCard.png" />
+          <PlistImageFile Name="389_sp_listen_manyCard.png" Key="389_sp_listen_manyCard.png" />
+          <PlistImageFile Name="389_sp_tableBtBg.png" Key="389_sp_tableBtBg.png" />
+          <PlistImageFile Name="bt_bridge_1.png" Key="bt_bridge_1.png" />
+          <PlistImageFile Name="bt_bridge_2.png" Key="bt_bridge_2.png" />
+          <PlistImageFile Name="bt_bump_1.png" Key="bt_bump_1.png" />
+          <PlistImageFile Name="bt_bump_2.png" Key="bt_bump_2.png" />
+          <PlistImageFile Name="bt_chat_1.png" Key="bt_chat_1.png" />
+          <PlistImageFile Name="bt_chat_2.png" Key="bt_chat_2.png" />
+          <PlistImageFile Name="bt_close_setLayer_1.png" Key="bt_close_setLayer_1.png" />
+          <PlistImageFile Name="bt_close_setLayer_2.png" Key="bt_close_setLayer_2.png" />
+          <PlistImageFile Name="bt_continue_1.png" Key="bt_continue_1.png" />
+          <PlistImageFile Name="bt_continue_2.png" Key="bt_continue_2.png" />
+          <PlistImageFile Name="bt_eat_1.png" Key="bt_eat_1.png" />
+          <PlistImageFile Name="bt_eat_2.png" Key="bt_eat_2.png" />
+          <PlistImageFile Name="bt_exit_1.png" Key="bt_exit_1.png" />
+          <PlistImageFile Name="bt_exit_2.png" Key="bt_exit_2.png" />
+          <PlistImageFile Name="bt_howPlay_1.png" Key="bt_howPlay_1.png" />
+          <PlistImageFile Name="bt_howPlay_2.png" Key="bt_howPlay_2.png" />
+          <PlistImageFile Name="bt_listen_1.png" Key="bt_listen_1.png" />
+          <PlistImageFile Name="bt_listen_2.png" Key="bt_listen_2.png" />
+          <PlistImageFile Name="bt_pass_1.png" Key="bt_pass_1.png" />
+          <PlistImageFile Name="bt_pass_2.png" Key="bt_pass_2.png" />
+          <PlistImageFile Name="bt_recodeShow_1.png" Key="bt_recodeShow_1.png" />
+          <PlistImageFile Name="bt_recodeShow_2.png" Key="bt_recodeShow_2.png" />
+          <PlistImageFile Name="bt_send_1.png" Key="bt_send_1.png" />
+          <PlistImageFile Name="bt_send_2.png" Key="bt_send_2.png" />
+          <PlistImageFile Name="bt_soundOff_1.png" Key="bt_soundOff_1.png" />
+          <PlistImageFile Name="bt_soundOff_2.png" Key="bt_soundOff_2.png" />
+          <PlistImageFile Name="bt_start_1.png" Key="bt_start_1.png" />
+          <PlistImageFile Name="bt_start_2.png" Key="bt_start_2.png" />
+          <PlistImageFile Name="bt_trustee_1.png" Key="bt_trustee_1.png" />
+          <PlistImageFile Name="bt_trustee_2.png" Key="bt_trustee_2.png" />
+          <PlistImageFile Name="bt_trusteeCancel_1.png" Key="bt_trusteeCancel_1.png" />
+          <PlistImageFile Name="bt_trusteeCancel_2.png" Key="bt_trusteeCancel_2.png" />
+          <PlistImageFile Name="bt_voice_1.png" Key="bt_voice_1.png" />
+          <PlistImageFile Name="bt_voice_2.png" Key="bt_voice_2.png" />
+          <PlistImageFile Name="bt_win_1.png" Key="bt_win_1.png" />
+          <PlistImageFile Name="bt_win_2.png" Key="bt_win_2.png" />
+          <PlistImageFile Name="sp_announcement.png" Key="sp_announcement.png" />
+          <PlistImageFile Name="sp_announcementBg.png" Key="sp_announcementBg.png" />
+          <PlistImageFile Name="sp_banker.png" Key="sp_banker.png" />
+          <PlistImageFile Name="sp_bubble_1.png" Key="sp_bubble_1.png" />
+          <PlistImageFile Name="sp_bubble_2.png" Key="sp_bubble_2.png" />
+          <PlistImageFile Name="sp_chooseFlag.png" Key="sp_chooseFlag.png" />
+          <PlistImageFile Name="sp_clock_1.png" Key="sp_clock_1.png" />
+          <PlistImageFile Name="sp_clock_2.png" Key="sp_clock_2.png" />
+          <PlistImageFile Name="sp_clock_3.png" Key="sp_clock_3.png" />
+          <PlistImageFile Name="sp_clock_4.png" Key="sp_clock_4.png" />
+          <PlistImageFile Name="sp_fangPao.png" Key="sp_fangPao.png" />
+          <PlistImageFile Name="sp_flag_bridge.png" Key="sp_flag_bridge.png" />
+          <PlistImageFile Name="sp_flag_bump.png" Key="sp_flag_bump.png" />
+          <PlistImageFile Name="sp_flag_eat.png" Key="sp_flag_eat.png" />
+          <PlistImageFile Name="sp_flag_listen.png" Key="sp_flag_listen.png" />
+          <PlistImageFile Name="sp_flag_pass.png" Key="sp_flag_pass.png" />
+          <PlistImageFile Name="sp_flag_win.png" Key="sp_flag_win.png" />
+          <PlistImageFile Name="sp_gameBtn_bg.png" Key="sp_gameBtn_bg.png" />
+          <PlistImageFile Name="sp_gender.png" Key="sp_gender.png" />
+          <PlistImageFile Name="sp_headBg.png" Key="sp_headBg.png" />
+          <PlistImageFile Name="sp_headCover.png" Key="sp_headCover.png" />
+          <PlistImageFile Name="sp_headCover_result.png" Key="sp_headCover_result.png" />
+          <PlistImageFile Name="sp_ID.png" Key="sp_ID.png" />
+          <PlistImageFile Name="sp_inputBg.png" Key="sp_inputBg.png" />
+          <PlistImageFile Name="sp_IP.png" Key="sp_IP.png" />
+          <PlistImageFile Name="sp_listenBg_1.png" Key="sp_listenBg_1.png" />
+          <PlistImageFile Name="sp_listenBg_2.png" Key="sp_listenBg_2.png" />
+          <PlistImageFile Name="sp_listenBg_3.png" Key="sp_listenBg_3.png" />
+          <PlistImageFile Name="sp_listenNum.png" Key="sp_listenNum.png" />
+          <PlistImageFile Name="sp_listenPromptFlag.png" Key="sp_listenPromptFlag.png" />
+          <PlistImageFile Name="sp_listenTimes.png" Key="sp_listenTimes.png" />
+          <PlistImageFile Name="sp_ready.png" Key="sp_ready.png" />
+          <PlistImageFile Name="sp_roomHost.png" Key="sp_roomHost.png" />
+          <PlistImageFile Name="sp_scoreFlag.png" Key="sp_scoreFlag.png" />
+          <PlistImageFile Name="sp_sparrowPlate.png" Key="sp_sparrowPlate.png" />
+          <PlistImageFile Name="sp_trustee.png" Key="sp_trustee.png" />
+          <PlistImageFile Name="sp_ziMo.png" Key="sp_ziMo.png" />
+        </PlistImageFolder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

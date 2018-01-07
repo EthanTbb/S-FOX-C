@@ -1,0 +1,45 @@
+<UserData Version="3.10.0.0">
+  <Properties>
+    <Item Key="CocosRecentOperation">
+      <Value ctype="CocosRecentOperation">
+        <LastPublishType Value="Resource" />
+        <IsLastPublish Value="True" />
+        <LastRunType Value="Windows" />
+      </Value>
+    </Item>
+    <Item Key="PackageParamsKey">
+      <Value ctype="PackageParams">
+        <LuaIsEncrypt Value="False" />
+        <LuaEncryptKey Value="" />
+        <LuaEncryptSign Value="" />
+        <Android_PackageName Value="org.cocos.studio" />
+        <AndroidkeyStore Value="" />
+        <AndroidVersion Value="android-10" />
+        <iOS_Target Value="studio iOS" />
+        <iOS_BundleID Value="iPhone Distribution: Shenzhen Wanghu Technology Co., LTD. (BDWFU3LZ42)" />
+        <Platform Value="None" />
+        <RunPlatform Value="None" />
+        <FrameworkVersion Value="cocos2d-x-3.5" />
+        <IsDebugKeystore Value="True" />
+        <KeystorePassword Value="" />
+        <KeystoreAliasName Value="" />
+        <KeystoreAliasPassword Value="" />
+        <EnableSourceMap Value="False" />
+        <EnableHTML5Advanced Value="False" />
+      </Value>
+    </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="room/CreateRoomResult.csd" />
+          <FilePathData Path="room/PriRoomListLayer.csd" />
+          <FilePathData Path="room/RecordLayer.csd" />
+          <FilePathData Path="room/RoomIdInputLayer.csd" />
+          <FilePathData Path="room/RoomInfoLayer.csd" />
+          <FilePathData Path="Shop/Detail/RoomCardShopLayer.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="Shop/Detail/RoomCardShopLayer.csd" />
+      </Value>
+    </Item>
+  </Properties>
+</UserData>

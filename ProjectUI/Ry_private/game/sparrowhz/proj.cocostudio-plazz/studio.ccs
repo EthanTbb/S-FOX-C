@@ -1,0 +1,74 @@
+<Solution>
+  <PropertyGroup Name="studio" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="fonts">
+          <TTF Name="round_body.ttf" />
+        </Folder>
+        <Folder Name="privateRoom">
+          <PlistImageFolder Image="privateRoom.png" PListFile="privateRoom.plist" Name=".privateRoom_PList.Dir">
+            <PlistImageFile Name="389bt_agree_1.png" Key="389bt_agree_1.png" />
+            <PlistImageFile Name="389bt_agree_2.png" Key="389bt_agree_2.png" />
+            <PlistImageFile Name="389bt_oppose_1.png" Key="389bt_oppose_1.png" />
+            <PlistImageFile Name="389bt_oppose_2.png" Key="389bt_oppose_2.png" />
+            <PlistImageFile Name="389sp_dismissRoom_bg.png" Key="389sp_dismissRoom_bg.png" />
+            <PlistImageFile Name="389sp_dismissRoom_flag.png" Key="389sp_dismissRoom_flag.png" />
+            <PlistImageFile Name="bt_close_389.png" Key="bt_close_389.png" />
+            <PlistImageFile Name="bt_createRoom_1.png" Key="bt_createRoom_1.png" />
+            <PlistImageFile Name="bt_createRoom_2.png" Key="bt_createRoom_2.png" />
+            <PlistImageFile Name="bt_dismiss_1.png" Key="bt_dismiss_1.png" />
+            <PlistImageFile Name="bt_dismiss_2.png" Key="bt_dismiss_2.png" />
+            <PlistImageFile Name="bt_help_1.png" Key="bt_help_1.png" />
+            <PlistImageFile Name="bt_help_2.png" Key="bt_help_2.png" />
+            <PlistImageFile Name="bt_invite_0.png" Key="bt_invite_0.png" />
+            <PlistImageFile Name="bt_invite_1.png" Key="bt_invite_1.png" />
+            <PlistImageFile Name="bt_leaveRoom_1.png" Key="bt_leaveRoom_1.png" />
+            <PlistImageFile Name="bt_leaveRoom_2.png" Key="bt_leaveRoom_2.png" />
+            <PlistImageFile Name="bt_pay_1.png" Key="bt_pay_1.png" />
+            <PlistImageFile Name="bt_pay_2.png" Key="bt_pay_2.png" />
+            <PlistImageFile Name="bt_share_1.png" Key="bt_share_1.png" />
+            <PlistImageFile Name="bt_share_2.png" Key="bt_share_2.png" />
+            <PlistImageFile Name="bt_zanLi_1.png" Key="bt_zanLi_1.png" />
+            <PlistImageFile Name="bt_zanLi_2.png" Key="bt_zanLi_2.png" />
+            <PlistImageFile Name="cbx_select_1.png" Key="cbx_select_1.png" />
+            <PlistImageFile Name="cbx_select_2.png" Key="cbx_select_2.png" />
+            <PlistImageFile Name="sp_bigWinner.png" Key="sp_bigWinner.png" />
+            <PlistImageFile Name="sp_createCost.png" Key="sp_createCost.png" />
+            <PlistImageFile Name="sp_createRoom.png" Key="sp_createRoom.png" />
+            <PlistImageFile Name="sp_frame.png" Key="sp_frame.png" />
+            <PlistImageFile Name="sp_frame_bg1.png" Key="sp_frame_bg1.png" />
+            <PlistImageFile Name="sp_frame_bg2.png" Key="sp_frame_bg2.png" />
+            <PlistImageFile Name="sp_frame_bg3.png" Key="sp_frame_bg3.png" />
+            <PlistImageFile Name="sp_gameResult.png" Key="sp_gameResult.png" />
+            <PlistImageFile Name="sp_inningsBg.png" Key="sp_inningsBg.png" />
+            <PlistImageFile Name="sp_lackBean.png" Key="sp_lackBean.png" />
+            <PlistImageFile Name="sp_lackRoomCard.png" Key="sp_lackRoomCard.png" />
+            <PlistImageFile Name="sp_maCount.png" Key="sp_maCount.png" />
+            <PlistImageFile Name="sp_myRoom.png" Key="sp_myRoom.png" />
+            <PlistImageFile Name="sp_oneTimesResult.png" Key="sp_oneTimesResult.png" />
+            <PlistImageFile Name="sp_roomCardBottom.png" Key="sp_roomCardBottom.png" />
+            <PlistImageFile Name="sp_roomCardNumBg.png" Key="sp_roomCardNumBg.png" />
+            <PlistImageFile Name="sp_roomCardTop.png" Key="sp_roomCardTop.png" />
+            <PlistImageFile Name="sp_roomHost.png" Key="sp_roomHost.png" />
+            <PlistImageFile Name="sp_roomHost_1.png" Key="sp_roomHost_1.png" />
+            <PlistImageFile Name="sp_roomInfoBg.png" Key="sp_roomInfoBg.png" />
+            <PlistImageFile Name="sp_roomLimit.png" Key="sp_roomLimit.png" />
+            <PlistImageFile Name="sp_roomResult_bg1.png" Key="sp_roomResult_bg1.png" />
+            <PlistImageFile Name="sp_roomUserNum.png" Key="sp_roomUserNum.png" />
+            <PlistImageFile Name="sp_sparrowHz.png" Key="sp_sparrowHz.png" />
+            <PlistImageFile Name="sp_threeTimes.png" Key="sp_threeTimes.png" />
+            <PlistImageFile Name="sp_timesFlag.png" Key="sp_timesFlag.png" />
+            <PlistImageFile Name="sp_userAccount.png" Key="sp_userAccount.png" />
+          </PlistImageFolder>
+          <Project Name="DismissLayer.csd" Type="Scene" />
+          <Project Name="nodeUserData.csd" Type="Node" />
+          <Project Name="RoomCardLayer.csd" Type="Scene" />
+          <Project Name="RoomGameLayer.csd" Type="Scene" />
+          <Project Name="RoomResultLayer.csd" Type="Scene" />
+          <Project Name="RoomResultLayer_temp.csd" Type="Scene" />
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
