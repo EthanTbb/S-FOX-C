@@ -477,15 +477,17 @@ function GameViewLayer:loadResource()
     self.m_time_num = self.m_time_bg:getChildByName("time_num")
 
     for i = 1, 4 do
-
-        local head_bg = csbNode:getChildByName(string.format("head_bg_%d", i))
-        if i == 1 then
+		local viewId = self._scene:SwitchViewChairID(i - 1)
+        local head_bg = csbNode:getChildByName(string.format("head_bg_%d", viewId))
+        if viewId == 1 then
             -- 游戏币
             self.m_atlasScore = head_bg:getChildByName("player_score")
         else
             head_bg:setVisible(false)
         end
-        local head_cover = head_bg:getChildByName("head_cover")
+		local img_pri_own = head_bg:getChildByName("img_pri_own")
+		img_pri_own:setLocalZOrder(TAG.Tag_Head + 7)
+		local head_cover = head_bg:getChildByName("head_cover")
         head_cover:setLocalZOrder(TAG.Tag_Head + 1)
 
         local player_status = head_bg:getChildByName("player_status")
@@ -496,21 +498,21 @@ function GameViewLayer:loadResource()
         heart:setVisible(false)
         heart:setLocalZOrder(TAG.Tag_Head + 5)
         --
-        local tip_ready = csbNode:getChildByName(string.format("tip_ready_%d", i))
+        local tip_ready = csbNode:getChildByName(string.format("tip_ready_%d", viewId))
         tip_ready:setVisible(false)
-        local tip_operate = csbNode:getChildByName(string.format("tip_operate_%d", i))
+        local tip_operate = csbNode:getChildByName(string.format("tip_operate_%d", viewId))
         tip_operate:setVisible(false)
 
-        tip_addTime = csbNode:getChildByName(string.format("tip_addTime_%d", i))
+        tip_addTime = csbNode:getChildByName(string.format("tip_addTime_%d", viewId))
         tip_addTime:setVisible(false)
 
-        local tip_no_addTime = self.m_csbNode:getChildByName(string.format("tip_no_addTime_%d", i))
+        local tip_no_addTime = self.m_csbNode:getChildByName(string.format("tip_no_addTime_%d", viewId))
         tip_no_addTime:setVisible(false)
 
         local text_curScore = head_bg:getChildByName("text_curScore")
         text_curScore:setString("当前得分:0")
 
-        local img_voice_box = csbNode:getChildByName("img_voice_box_"..i)
+        local img_voice_box = csbNode:getChildByName("img_voice_box_"..viewId)
         img_voice_box:setVisible(false)
         local img_voice = img_voice_box:getChildByName("img_voice")
         img_voice_box:setLocalZOrder(TAG_ZORDER.VOICE_ZORDER)
@@ -1701,7 +1703,7 @@ function GameViewLayer:OnUpdateUser(viewId, userItem, bLeave)
         if GlobalUserItem.isAntiCheat() and viewId ~= cmd.MY_VIEWID then
             text_nickName:setString("玩家"..viewId)
         end
-        --玩家当前游戏币数
+        --玩家当前金币数
         local player_score = head_bg:getChildByName("player_score")
         player_score:setString(string.format("%d",userItem.lScore))
         --玩家当前游戏得分
@@ -1719,10 +1721,17 @@ function GameViewLayer:OnUpdateUser(viewId, userItem, bLeave)
         end 
 
     end
-
+	
     if cmd.MY_VIEWID == viewId then
         self:reSetUserInfo()
     end
+	
+	if PriRoom and GlobalUserItem.bPrivateRoom then
+		if userItem.dwUserID == PriRoom:getInstance().m_tabPriData.dwTableOwnerUserID then
+		local img_pri_own = head_bg:getChildByName("img_pri_own")
+		img_pri_own:setVisible(true)
+		end
+	end
 end
 
 function GameViewLayer:onUserReady(viewId, bReady)
@@ -2142,7 +2151,7 @@ function GameViewLayer:onGetOutCard(curViewId, lastViewId, lastOutCards, bReEnte
     -- 自己出牌
         if lastViewId == cmd.MY_VIEWID then
             local handCards = self.m_tabNodeCards[1]:getHandCards()
-            self.m_cardNum1:setVisible(true)
+            self.m_cardNum1:setVisible(false)
             self.m_cardNum1:setString(string.format("%d", #handCards))
             --算出牌分
             
@@ -2219,7 +2228,7 @@ function GameViewLayer:onGetOutCard(curViewId, lastViewId, lastOutCards, bReEnte
         self:outCardEffect(lastViewId, lastOutCards, vec)
         if lastViewId == cmd.MY_VIEWID then
             local handCards = self.m_tabNodeCards[1]:getHandCards()
-            self.m_cardNum1:setVisible(true)
+            self.m_cardNum1:setVisible(false)
             self.m_cardNum1:setString(string.format("%d", #handCards))
         end
     end

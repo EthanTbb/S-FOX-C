@@ -21,7 +21,7 @@ function ResultLayer.getTagSettle()
         m_userName = "",
         -- 文本颜色
         nameColor = cc.c4b(255,255,255,255),
-        -- 计算游戏币
+        -- 计算金币
         m_settleCoin = "",
         -- 文本颜色
         coinColor = cc.c4b(255,255,255,255),       
@@ -201,7 +201,7 @@ function ResultLayer:reSet()
         self.m_tabClipNickName[i]:setString("")
         self.m_tabClipNickName[i]:setTextColor(cc.c4b(255,255,255,255))
 
-        -- 游戏币
+        -- 金币
         self.m_tabTextCoin[i]:setString("")
         self.m_tabTextCoin[i]:setColor(cc.c4b(255,255,255,255))
 

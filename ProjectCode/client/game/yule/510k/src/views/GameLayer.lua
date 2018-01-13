@@ -879,7 +879,7 @@ function GameLayer:onEventGameScenePlay( dataBuffer )
     self.m_cbFriendFlag = cmd_table.cbFriendFlag
     local myChairId = self._gameFrame:GetChairID()
     self._gameView.m_cardNum1:setString(string.format("%d", cmd_table.cbHandCardCount[1][myChairId + 1]))
-    self._gameView.m_cardNum1:setVisible(true)
+    self._gameView.m_cardNum1:setVisible(false)
     self._gameView:updateRule()
     --[[
     local empTyCard = GameLogic:emptyCardList(cmd.NORMAL_COUNT)
@@ -979,7 +979,7 @@ function GameLayer:onEventGameScenePlay( dataBuffer )
         end
         --个人拥有的牌
         self._gameView.m_cardNum1:setString(string.format("%d", cmd_table.cbHandCardCount[1][myChairId + 1]))
-        self._gameView.m_cardNum1:setVisible(true)
+        self._gameView.m_cardNum1:setVisible(false)
         self._gameView:onGetOutCard(curView, outView, self.m_cbTurnCardData)
         --历史成绩
         print("--- 历史成绩 ---")
@@ -1019,7 +1019,7 @@ function GameLayer:onEventGameScenePlay( dataBuffer )
         end
     end
     self._gameView.m_cardNum1:setString(string.format("%d", cmd_table.cbHandCardCount[1][myChairId + 1]))
-    self._gameView.m_cardNum1:setVisible(true)
+    self._gameView.m_cardNum1:setVisible(false)
 end
 
 --去0

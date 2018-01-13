@@ -728,7 +728,7 @@ function CardsNode:arrangeAllCards( showAnimation, pCallBack )
 								end								
 							end	
 							if nil ~= self.m_pSelectedListener then
-								self.m_pSelectedListener.m_cardNum1:setVisible(true)
+								self.m_pSelectedListener.m_cardNum1:setVisible(false)
     							self.m_pSelectedListener.m_cardNum1:setString(string.format("%d", i))
     						end						
 						end), seq)

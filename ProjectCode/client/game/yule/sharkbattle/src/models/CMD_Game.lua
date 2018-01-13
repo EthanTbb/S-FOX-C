@@ -25,7 +25,7 @@ local cmd = {}
 --游戏版本
 cmd.VERSION 					= appdf.VersionValue(6,0,3)
 --游戏标识
-cmd.KIND_ID						= 128
+cmd.KIND_ID						= 123
 	
 --游戏人数
 cmd.GAME_PLAYER					= 100
